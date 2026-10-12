@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VYBE - Outfits</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
 </head>
 
 <body>
@@ -25,68 +26,19 @@
     <main>
         <div class="outfits-content-container">
 
-            <aside class="outfits-aside">
-
-                <div class="header-line-card">
-                    <p class="outfit-title">FILTERS</p>
-                    <p class="card-symbols">─ □ ×</p>
-                </div>
-
-                <div class="filter-content">
-
-                    <div class="filter-section">
-                        <h3>STYLE</h3>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> Y2K
-                        </label>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> Cyber
-                        </label>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> Streetwear
-                        </label>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> Goth
-                        </label>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> Pink
-                        </label>
-                    </div>
-
-                    <div class="filter-section">
-                        <h3>PRICE</h3>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> Under $20
-                        </label>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> $20–$40
-                        </label>
-
-                        <label class="filter-option">
-                            <input type="checkbox"> $40+
-                        </label>
-                    </div>
-
-                </div>
-
-            </aside>
-
             <div class="cards-container">
 
                 <div class="search-container">
-                    <input class="text-input-search"
-                           type="text"
-                           placeholder="Search for outfits...">
+                    <input
+                        class="text-input-search"
+                        type="text"
+                        placeholder="Search for outfits..."
+                    >
 
-                    <button class="search-button"
-                        onclick="alert('✦ VYBE SEARCH ✦\n\nWe looked everywhere.\nYour perfect outfit is hiding.')">
+                    <button
+                        class="search-button"
+                        onclick="alert('✦ VYBE SEARCH ✦\n\nWe looked everywhere.\nYour perfect outfit is hiding.')"
+                    >
                         SEARCH
                     </button>
                 </div>
@@ -198,7 +150,63 @@
                     </div>
 
                 </div>
+
             </div>
+
+            <aside class="outfits-aside">
+
+                <div class="header-line-card">
+                    <p class="outfit-title">FILTERS</p>
+                    <p class="card-symbols">─ □ ×</p>
+                </div>
+
+                <div class="filter-content">
+
+                    <div class="filter-section">
+                        <h3>STYLE</h3>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> Y2K
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> Cyber
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> Streetwear
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> Goth
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> Pink
+                        </label>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>PRICE</h3>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> Under $20
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> $20–$40
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox"> $40+
+                        </label>
+                    </div>
+
+                </div>
+
+            </aside>
+
+            
 
         </div>
     </main>
@@ -206,8 +214,6 @@
     <footer>
         <h1>Contacts</h1>
     </footer>
-
-    <script src="main.js"></script>
 
 </body>
 </html>
