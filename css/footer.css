@@ -30,6 +30,7 @@ footer {
     width: 100%;
 }
 
+
 .footer-container {
     display: flex;
     width: 100%;
@@ -119,4 +120,26 @@ footer {
         inset 0 6px 8px rgba(0, 0, 0, 0.4),
         inset 0 -6px 8px rgba(40, 10, 90, 0.9),
         0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 15px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 0;
+    }
+
+    .footer-container {
+        width: 100%;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+
+    .footer-content {
+        margin-top: 15px;
+    }
 }

@@ -50,7 +50,7 @@
 }
 
 .outfit-title {
-    font-family: "arcade";
+    font-family: "arcade" !important;
     letter-spacing: 2px;
 }
 
@@ -202,7 +202,7 @@
 
 .outfits-aside {
     width: 230px;
-    min-height: 450px;
+    min-height:350px;
     flex-shrink: 0;
     border-radius: 10px;
     display: flex;

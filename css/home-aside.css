@@ -3,14 +3,12 @@
     flex-direction: column;
     justify-content: center;
     width: 65%;
-    padding: 40px;
     color: rgb(152, 151, 151);
 }
 
 @media (max-width: 768px) {
     .home-container {
         width: 100%;
-        padding: 20px;
         margin-bottom: 40px;
     }
 }
@@ -19,39 +17,41 @@
     width: 30%;
     width: 400px;
     height: 450px;
-    /* padding: 40px; */
     border-radius: 25px;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: flex-start;
-    border: 2px solid #A855F7;
+    border: 2px solid #A855F7; 
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
     color: #A9A3C7;
     align-self: center;
     background-color: #101126;
-    margin-top: 0;
+    /* padding-inline: 1rem; */
 }
+
+@media (max-width: 768px) {
+    .home-aside {
+        width: 100%;
+    }
+} 
 
 .home-aside h2 {
     font-family: "arcade";
     color: #D8C7FF;
-    font-size: 28px;
+    font-size: 34px; 
     margin-bottom: 20px; 
     word-spacing: 3px;
     letter-spacing: 2px;
-    margin-left: 20px;
 }
 
 .aside-description {
     color: #A9A3C7;
     font-size: 17px;
     line-height: 1.6;
-    margin-left: 20px;
-}
+} 
 
 .aside-button {
     font-family: "arcade";
-    margin-left: 20px;
     cursor: pointer;
     border-radius: 30px;
     border: 2px solid #D8C7FF;
@@ -90,7 +90,8 @@
 .aside-star {
     font-size: 100px;
     color: #D8C7FF;
-    margin-left: 20px;
+    line-height: 0.8;
+    margin-bottom: 24px; 
 }
 
 .header-line {
@@ -119,13 +120,14 @@
     border-radius: 17px 17px 0 0;
     width: 100%;
     box-sizing: border-box;
-    margin: 0 0px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-inline: 1rem;
+    padding-block: 6px;
+    align-items: center; 
 
     color: #080A18;
-    padding: 6px;
     background: linear-gradient(
         to bottom,
         #D8C7FF,
@@ -139,3 +141,9 @@
     inset 0 -8px 10px rgba(109, 40, 217, 0.6);
 }
 
+.home-aside-card-content {
+    display: flex;
+    padding-inline: 1rem;
+    flex-direction: column; 
+    margin-block: auto;
+}
