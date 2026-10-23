@@ -260,3 +260,9 @@
     accent-color: #A855F7;
     cursor: pointer;
 }
+
+@media (max-width: 786px){
+    .filter-content {
+        
+    }
+}
