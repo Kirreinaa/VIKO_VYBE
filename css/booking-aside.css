@@ -21,7 +21,7 @@
     /* margin-left: 100px; */
 }
 
-@media (max-width: 786px){
+@media (max-width: 768px){
     .book-aside {
         width: 100%;
     }

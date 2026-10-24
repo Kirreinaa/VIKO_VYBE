@@ -32,9 +32,10 @@ main {
     min-height: 85vh;
     /* flex: 1; */
     flex-direction: row;
-    padding: 2.5rem;}
+    padding: 2.5rem;
+}
 
-@media (max-width: 786px){
+@media (max-width: 768px){
     main {
         padding: 1rem;
     }
