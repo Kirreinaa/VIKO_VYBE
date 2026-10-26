@@ -22,7 +22,7 @@
 }
 
 .book-button {
-    font-family: "arcade";
+    font-family: inherit;
     cursor: pointer;
     border-radius: 30px;
     border: 2px solid #D8C7FF;
@@ -68,6 +68,7 @@
 .booking-container {
     display: flex;
     flex-direction: column;
+    font-family: "arcade";
 }
 
 .book-title {
