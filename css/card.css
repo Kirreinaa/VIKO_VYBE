@@ -1,7 +1,7 @@
 .card {
     border: 2px solid #A855F7;
     padding: 0;
-    width: 300px;
+    width: 100%;
     height: 480px;
     background-color: #101126;
     border-radius: 10px;
@@ -9,8 +9,10 @@
     flex-direction: column;
     transition: 0.5s;
     color: #D8C7FF;
-    overflow: hidden;
+    /* ??? */
+    overflow: hidden; 
     box-sizing: border-box;
+    min-width: 0;
 }
 
 .card-text {
@@ -23,17 +25,15 @@
 }
 
 #cards {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
     gap: 20px;
     padding: 20px;
     margin-top: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .card:hover {
-    /* transform: scale(1.01); */
     transition: 0.5s;
     box-shadow: 0 0 40px rgba(168, 85, 247, 0.7);
 }
@@ -45,12 +45,16 @@
     display: block;
     border-radius: 10px;
     margin: 10px;
+    /* ??? */
     width: calc(100% - 20px);
 }
 
 .outfit-title {
     font-family: "arcade" !important;
     letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .buy-button {
@@ -114,6 +118,8 @@
 
 .header-line-card {
     display: flex;
+    white-space: nowrap;
+    overflow: hidden;
     flex-direction: row;
     justify-content: space-between;
     color: #080A18;
@@ -198,10 +204,9 @@
         0 0 30px rgba(168, 85, 247, 0.9);
 }
 
-
 .outfits-aside {
     width: 230px;
-    min-height:350px;
+    min-height: 350px;
     flex-shrink: 0;
     border-radius: 10px;
     display: flex;
@@ -220,7 +225,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    /* gap: 25px; */
     width: 100%;
 }
 
@@ -260,8 +264,93 @@
     cursor: pointer;
 }
 
-@media (max-width: 768px){
-    .filter-content {
-        
+.outfits-aside {
+    display: none;
+}
+
+#filter-toggle:checked ~ .outfits-aside {
+    display: flex;
+}
+
+#filter-toggle {
+    display: none;
+}
+
+.filter-button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+     font-family: "arcade";
+    cursor: pointer;
+    border-radius: 30px;
+    border: 2px solid #D8C7FF;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #080A18;
+    width: 100px;
+    height: 42px;
+
+    background: linear-gradient(
+        to bottom,
+        #D8C7FF,
+        #B388FF,
+        #A855F7
+    );
+
+    box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
+        0 0 20px rgba(168, 85, 247, 0.7);
+
+    transition: 0.2s;
+
+}
+
+@media (max-width: 1200px) {
+    #cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .outfits-content-container {
+        flex-direction: column;
+    }
+
+    .outfits-aside {
+        order: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cards-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    #cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #cards {
+        grid-template-columns: minmax(0, 300px);
+        justify-content: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-input-search {
+        width: 100%;
+        max-width: 400px;
     }
 }

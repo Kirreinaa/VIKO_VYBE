@@ -1,5 +1,6 @@
 .booking-form {
     /* width: 900px; */
+    font-family: "arcade";
     max-width: 100%;
     width: 100%;
     display: flex;
@@ -68,7 +69,6 @@
 .booking-container {
     display: flex;
     flex-direction: column;
-    font-family: "arcade";
 }
 
 .book-title {
@@ -85,8 +85,6 @@
     color: #A9A3C7;
     max-width: 100%;
 }
-
-
 
 .booking-cards {
     display: flex;
