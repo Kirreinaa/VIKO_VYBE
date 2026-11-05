@@ -1,56 +1,175 @@
+.landing-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-size: 16px;
+}
+
+.index-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+}
+
 .home-title {
     font-family: "arcade";
-    font-size: 64px;
+    font-size: 5em;
+    line-height: 1.1;
     color: #D8C7FF;
     letter-spacing: 1px;
 }
 
-@media (max-width: 767px) {
-    .home-title {
-        font-size: 40px;
-    }
-}
-
 .home-description {
-    font-size: 21px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #A9A3C7
+    font-size: 1.6em;
+    margin: 0.6em 0;
+    color: #A9A3C7;
 }
 
-.home-button {
+.home-button,
+.aside-button {
     font-family: "arcade";
-    cursor: pointer;
-    border-radius: 30px;
-    border: 2px solid #D8C7FF;
-    font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    padding: 0.6em 1.5em;
+    border-radius: 2em;
+    border: 2px solid #D8C7FF;
     color: #080A18;
-    width: 250px;
-    height: 60px;
-    margin-top: 10px;  
-    letter-spacing: 3px;
-    word-spacing: 3px;
-    background: linear-gradient(
-    to bottom,
-    #D8C7FF,
-    #B388FF,
-    #A855F7
-); 
-
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+    background: linear-gradient(to bottom, #D8C7FF, #B388FF, #A855F7);
     box-shadow:
-    inset 0 8px 10px rgba(255, 255, 255, 0.8),
-    inset 0 -8px 10px rgba(109, 40, 217, 0.6),
-    0 0 20px rgba(168, 85, 247, 0.7);
-
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
+        0 0 20px rgba(168, 85, 247, 0.7);
     transition: 0.2s;
 }
 
-.home-button:hover {
+.home-button:hover,
+.aside-button:hover {
     transform: scale(1.03);
-        box-shadow:
+    box-shadow:
         inset 0 8px 10px rgba(255, 255, 255, 0.8),
         inset 0 -8px 10px rgba(109, 40, 217, 0.6),
         0 0 30px rgba(168, 85, 247, 0.9);
 }
 
+.home-button {
+    font-size: 1.5em;
+}
+
+.aside-button {
+    font-size: 1.3em;
+    margin-top: 0.8em;
+}
+
+.home-aside {
+    width: 35%;
+    min-width: 22em;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 2px solid #A855F7;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+    background-color: #101126;
+    color: #A9A3C7;
+}
+
+.header-line-aside-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em 1em;
+    font-size: 1.1em;
+    color: #080A18;
+    background: linear-gradient(to bottom, #D8C7FF, #B388FF, #A855F7);
+    box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6);
+}
+
+.home-aside-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding: 1.5em 1em;
+}
+
+.home-aside h2 {
+    font-family: "arcade";
+    font-size: 2.5em;
+    color: #D8C7FF;
+    margin-bottom: 0.3em;
+    letter-spacing: 2px;
+}
+
+.aside-star {
+    font-size: 5em;
+    line-height: 0.8;
+    color: #D8C7FF;
+    margin-bottom: 0.2em;
+}
+
+.aside-description {
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+
+
+@media (min-width: 1440px) {
+    .landing-wrapper {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .landing-wrapper {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .landing-wrapper {
+        font-size: 13px;
+    }
+
+    .index-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .home-container {
+        flex: none;
+    }
+
+    .home-aside {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-wrapper {
+        font-size: 10px;
+    }
+
+    .home-button,
+    .aside-button {
+        align-self: stretch;
+    }
+}

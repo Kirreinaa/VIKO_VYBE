@@ -1,157 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">          
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+  <body>
+    <header>
+      <h1>✦ VYBE</h1>
 
-    <body>
+      <nav class="header-links">
+        <a href="index.html">Home</a>
+        <a href="outfits.html">Outfits</a>
+        <a href="book.html">Book a stylist</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
 
-        <header>
-            <h1>✦ VYBE</h1>
+    <main>
+      <div class="booking-container">
+        <h2 class="book-title">Find your VYBE</h2>
 
-            <nav class="header-links">
-                <a href="index.html">Home</a>
-                <a href="outfits.html">Outfits</a>
-                <a href="book.html">Book a stylist</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+        <section class="booking-info">
+          <p>
+            Not sure what to wear? Our stylist will help you create an outfit
+            that fits your personality, occasion and budget.
+          </p>
+          <p>
+            Fill out the form below and we will contact you by email within two
+            business days.
+          </p>
+        </section>
 
-        <main>
-            <div class="booking-container">
-
-                <h2 class="book-title">Find your VYBE</h2>
-
-                <section class="booking-info">
-                    <p>
-                        Not sure what to wear? Our stylist will help you create
-                        an outfit that fits your personality, occasion and budget.
-                    </p>
-
-                    <p>
-                        Fill out the form below and we will contact you by email
-                        within two business days.
-                    </p>
-                </section>
-
-                <div class="booking-cards">
-
-                    <section class="booking-form">
-
-                        <div class="form-row">
-
-                            <div class="form-field">
-                                <label for="name">Your name:</label>
-                                <input class="text-input" type="text" id="name" placeholder="Enter your name">
-                            </div>
-
-                            <div class="form-field">
-                                <label for="email">Your Email:</label>
-                                <input class="text-input" type="text" id="email" placeholder="Enter your email">
-                            </div>
-
-                        </div>
-
-                        <div class="form-row">
-
-                            <div class="form-field">
-                                <label for="budget">What is your budget?</label>
-                                <select class="select-options" id="budget">
-                                    <option>under $50</option>
-                                    <option>$50-100$</option>
-                                    <option>$100-150$</option>
-                                    <option>$150+</option>
-                                </select>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="outfit-style">How do you want your outfit to feel?</label>
-                                <select class="select-options" id="outfit-style">
-                                    <option>Bold & edgy</option>
-                                    <option>Soft & dreamy</option>
-                                    <option>Y2K & playful</option>
-                                    <option>Simple & clean</option>
-                                </select>
-                            </div>
-
-                        </div>
-
-                        <div class="form-field">
-                            <label>Tell us about yourself</label>
-                            <textarea 
-                                class="big-text-input" 
-                                id="about-yourself" 
-                                placeholder="For example: I'm going to a concert, I prefer dark colors, I need something casual..."></textarea>
-                        </div>
-
-                        <div>
-                            <label class="consent-box" type="consent">
-                                <input type="checkbox" required>
-                                Agreement to the service terms
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="consent-box" type="consent">
-                                <input type="checkbox" required>
-                                Consent to the use of data for outfit recommendations
-                            </label>
-                        </div>
-
-                        <button class="book-button" type="submit">BOOK NOW</button>
-
-                    </section>
-
-                    <div class="book-aside-container">
-
-                        <div class="book-aside">
-
-                        <div class="header-line-aside">
-                            <p class="outfit-title">WHY BOOK WITH VYBE?</p>
-                            <p class="card-symbols">─ □ ×</p>
-                        </div>
-
-                        <aside>
-                            <div class="book-aside-description">
-                                <b class="book-aside-title">★ Personal approach</b>
-                                We consider your style, goals and budget.<br><br>
-
-                                <b class="book-aside-title">★ Experienced stylists</b>
-                                Real people, real passion for fashion.<br><br>
-
-                                <b class="book-aside-title">★ Unique looks</b>
-                                Outfits you won't find anywhere else.<br><br>
-
-                                <b class="book-aside-title">★ Fast & easy</b>
-                                Fill out the form and we'll do the rest.<br><br>
-                            </div>
-                        </aside>
-
-                    </div>
-
-                        <div class="book-aside-lower">
-                            <div class="header-line-card">
-                                <p class="outfit-title">BUTTERFLY.png</p>
-                                <p class="card-symbols">─ □ ×</p>
-                            </div>
-                            <aside>
-                                <img class="aside-photo" src="Images/book-aside-photo.jpg" alt="Stars">
-                            </aside>
-                        </div>
-
-                    </div>
-
-                </div>
-
+        <div class="booking-cards">
+          <form class="booking-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Your name:</label>
+                <input
+                  class="input"
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-field">
+                <label for="email">Your Email:</label>
+                <input
+                  class="input"
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
             </div>
-        </main>
 
-        <footer><h1>© 2026 VYBE</h1></footer>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="budget">What is your budget?</label>
+                <select class="input" id="budget">
+                  <option>under $50</option>
+                  <option>$50-$100</option>
+                  <option>$100-$150</option>
+                  <option>$150+</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="outfit-style">What vybe do you want?</label>
+                <select class="input" id="outfit-style">
+                  <option>Bold & edgy</option>
+                  <option>Soft & dreamy</option>
+                  <option>Y2K & playful</option>
+                  <option>Simple & clean</option>
+                </select>
+              </div>
+            </div>
 
-    </body>
+            <div class="form-field">
+              <label for="about-yourself">Tell us about yourself</label>
+              <textarea
+                class="input"
+                id="about-yourself"
+                placeholder="For example: I'm going to a concert, I prefer dark colors, I need something casual..."
+              ></textarea>
+            </div>
 
+            <label class="consent-box">
+              <input type="checkbox" required />
+              Agreement to the service terms
+            </label>
+
+            <label class="consent-box">
+              <input type="checkbox" required />
+              Consent to the use of data for outfit recommendations
+            </label>
+
+            <button class="book-button" type="submit">BOOK NOW</button>
+          </form>
+
+          <div class="asides">
+            <div class="card">
+              <div class="card-bar">
+                <p class="outfit-title">WHY BOOK WITH VYBE?</p>
+                <p class="card-symbols">─ □ ×</p>
+              </div>
+              <aside>
+                <div class="book-aside-description">
+                  <b class="book-aside-title">★ Personal approach</b>
+                  We consider your style, goals and budget.<br /><br />
+
+                  <b class="book-aside-title">★ Experienced stylists</b>
+                  Real people, real passion for fashion.<br /><br />
+
+                  <b class="book-aside-title">★ Unique looks</b>
+                  Outfits you won't find anywhere else.<br /><br />
+
+                  <b class="book-aside-title">★ Fast & easy</b>
+                  Fill out the form and we'll do the rest.<br /><br />
+                </div>
+              </aside>
+            </div>
+
+            <div class="card">
+              <div class="card-bar">
+                <p class="outfit-title">BUTTERFLY.png</p>
+                <p class="card-symbols">─ □ ×</p>
+              </div>
+              <aside>
+                <img
+                  class="aside-photo"
+                  src="Images/book-aside-photo.jpg"
+                  alt="Stars"
+                />
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer><h1>© 2026 VYBE</h1></footer>
+  </body>
 </html>

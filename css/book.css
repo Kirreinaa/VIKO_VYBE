@@ -1,74 +1,7 @@
-.booking-form {
-    /* width: 900px; */
-    font-family: "arcade";
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #D8C7FF;
-    margin-top: 50px;
-    border:3px solid #A855F7;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
-    /* background-color: #14162D; ????? */
-    box-sizing: border-box;
-    padding: 30px;
-}
-
-@media (max-width:768px) {
-    .booking-form {
-        padding: 15px;
-        margin-top: 25px;
-    }
-}
-
-.book-button {
-    font-family: inherit;
-    cursor: pointer;
-    border-radius: 30px;
-    border: 2px solid #D8C7FF;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    color: #080A18;
-    width: 220px;
-    margin-top: 20px;
-    height: 42px;
-    
-
-    background: linear-gradient(
-    to bottom,
-    #D8C7FF,
-    #B388FF,
-    #A855F7
-); 
-
-    box-shadow:
-    inset 0 8px 10px rgba(255, 255, 255, 0.8),
-    inset 0 -8px 10px rgba(109, 40, 217, 0.6),
-    0 0 20px rgba(168, 85, 247, 0.7);
-
-    transition: 0.2s;
-}
-
-@media (max-width: 768px) {
-    .book-button {
-        align-self: center;
-    }
-}
-
-.book-button:hover {
-    transform: scale(1.03);
-        box-shadow:
-        inset 0 8px 10px rgba(255, 255, 255, 0.8),
-        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
-        0 0 30px rgba(168, 85, 247, 0.9);
-}
-
 .booking-container {
-    display: flex;
-    flex-direction: column;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .book-title {
@@ -77,135 +10,63 @@
     color: #D8C7FF;
     letter-spacing: 2px;
     word-spacing: 5px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .booking-info {
     color: #A9A3C7;
-    max-width: 100%;
+    margin-bottom: 1rem;
 }
 
 .booking-cards {
     display: flex;
-    flex-direction: row;
     gap: 20px;
 }
 
-@media (max-width: 768px){
-    .booking-cards {
-        flex-direction: column;
-    }
-}
-
-.text-input {
-    border-radius: 10px;
+.booking-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: "arcade";
+    color: #D8C7FF;
+    padding: 30px;
+    border: 3px solid #A855F7;
+    border-radius: 20px;
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
-    border: 2px solid #A855F7;
-    height: 45px;
-    background-color: #080A18;
-    outline: none;
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    width: 400px;
-    color: #A9A3C7
-}
-
-@media (max-width: 768px) {
-    .text-input {
-        width: 100%;
-        margin-bottom: 25px;
-    }
-}
-
-.select-options {
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
-    border: 2px solid #A855F7;
-    height: 45px;
-    background-color: #080A18;
-    outline: none;
-    padding: 5px;
-    width: 400px; 
-    margin-top: 10px;
-    margin-bottom: 25px;  
-    color: #A9A3C7
+    box-sizing: border-box;
 }
 
 .form-row {
     display: flex;
-    flex-direction: row;
     gap: 40px;
 }
 
-
 .form-field {
+    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
 }
 
-@media (max-width: 767px){
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .select-options {
-        width: 100%;
-    }
-    
-    .form-field {
-        width: 100%;
-    }
-
-    .book-title {
-        font-size: 40px;
-    }
-
-    .header-line {
-        margin: 0 -20px 20px;
-    }
-}
-
-.big-text-input {
-    font-family: Arial, sans-serif;
-    resize:vertical;
+/* one style for input, select and textarea */
+.input {
+    width: 100%;
+    height: 45px;
+    margin: 10px 0 25px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #080A18;
+    color: #A9A3C7;
+    border: 2px solid #A855F7;
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
-    border: 2px solid #A855F7;
-    height: 90px;
-    background-color: #080A18;
     outline: none;
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    /* max-width: 100%; */
-    color: #A9A3C7
 }
 
-.header-line {
-    border-radius: 17px 17px 0 0;
-    margin: 0 -30px 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    color: #080A18;
-    padding: 6px;
-    background: linear-gradient(
-        to bottom,
-        #D8C7FF,
-        #B388FF,
-        #A855F7
-); 
-    
-
-    box-shadow:
-    inset 0 8px 10px rgba(255, 255, 255, 0.8),
-    inset 0 -8px 10px rgba(109, 40, 217, 0.6);
+textarea.input {
+    height: 90px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
 }
 
 .consent-box::after {
@@ -213,3 +74,98 @@
     color: red;
 }
 
+.book-button {
+    width: 220px;
+    height: 42px;
+    margin-top: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #080A18;
+    cursor: pointer;
+    border: 2px solid #D8C7FF;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #D8C7FF, #B388FF, #A855F7);
+    box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
+        0 0 20px rgba(168, 85, 247, 0.7);
+    transition: 0.2s;
+}
+
+.book-button:hover {
+    transform: scale(1.03);
+}
+
+.asides {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    color: #080A18;
+    background: linear-gradient(to bottom, #D8C7FF, #B388FF, #A855F7);
+    box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6);
+}
+
+.aside-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Tablet: form on top, two asides side by side */
+@media (max-width: 1024px) {
+    .booking-cards {
+        flex-direction: column;
+    }
+
+    .booking-form {
+        margin-top: 25px;
+        padding: 20px;
+    }
+
+    .asides {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+/* Mobile: everything in one column */
+@media (max-width: 768px) {
+    .book-title {
+        font-size: 40px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .booking-form {
+        padding: 15px;
+    }
+
+    .book-button {
+        align-self: center;
+    }
+
+    .asides {
+        flex-direction: column;
+    }
+}

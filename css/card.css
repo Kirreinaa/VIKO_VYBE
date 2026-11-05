@@ -2,15 +2,14 @@
     border: 2px solid #A855F7;
     padding: 0;
     width: 100%;
-    height: 480px;
+    height: auto;
     background-color: #101126;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     transition: 0.5s;
     color: #D8C7FF;
-    /* ??? */
-    overflow: hidden; 
+    overflow: hidden;
     box-sizing: border-box;
     min-width: 0;
 }
@@ -29,8 +28,10 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     justify-content: center;
     gap: 20px;
-    padding: 20px;
-    margin-top: 10px;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -39,13 +40,13 @@
 }
 
 .outfit-card-photo {
-    height: 330px;
+    aspect-ratio: 3 / 4;
+    height: auto;
     object-fit: cover;
     object-position: center 20%;
     display: block;
     border-radius: 10px;
     margin: 10px;
-    /* ??? */
     width: calc(100% - 20px);
 }
 
@@ -71,6 +72,7 @@
     margin-right: 10px;
     letter-spacing: 3px;
     word-spacing: 3px;
+
     background: linear-gradient(
         to bottom,
         #D8C7FF,
@@ -114,6 +116,7 @@
     word-spacing: 3px;
     display: flex;
     justify-content: flex-end;
+    flex-shrink: 0;
 }
 
 .header-line-card {
@@ -124,6 +127,7 @@
     justify-content: space-between;
     color: #080A18;
     padding: 6px;
+
     background: linear-gradient(
         to bottom,
         #D8C7FF,
@@ -151,8 +155,12 @@
 
 .search-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .text-input-search {
@@ -162,10 +170,12 @@
     height: 45px;
     background-color: #080A18;
     outline: none;
-    padding: 5px;
-    width: 400px;
+    flex: 1;
+    min-width: 0;
+    max-width: 400px;
     color: #A9A3C7;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .search-button {
@@ -180,6 +190,7 @@
     color: #080A18;
     width: 100px;
     height: 42px;
+    flex-shrink: 0;
 
     background: linear-gradient(
         to bottom,
@@ -204,12 +215,29 @@
         0 0 30px rgba(168, 85, 247, 0.9);
 }
 
+
+.outfits-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+.cards-container {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+}
+
+
 .outfits-aside {
+    display: flex;
     width: 230px;
     min-height: 350px;
+    margin-top: 65px;
     flex-shrink: 0;
     border-radius: 10px;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border: 2px solid #A855F7;
@@ -218,19 +246,63 @@
     background-color: #101126;
     overflow: hidden;
     align-self: flex-start;
-    margin-top: 75px;
+    box-sizing: border-box;
 }
 
-.outfits-content-container {
+.filter-close {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 2px solid #D8C7FF;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    color:#101126;
+    width: 34px;
+    height: 26px;
+    margin-left: 8px;
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        to bottom,
+        #D8C7FF,
+        #B388FF,
+        #A855F7
+    );
+
+    box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
+        0 0 20px rgba(168, 85, 247, 0.7);
+
+    transition: 0.2s;
+}
+
+.filter-close:hover {
+    transform: scale(1.03);
+        box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
+        0 0 30px rgba(168, 85, 247, 0.9);
+}
+
+.filter-button:hover {
+    transform: scale(1.03);
+    box-shadow:
+        inset 0 8px 10px rgba(255, 255, 255, 0.8),
+        inset 0 -8px 10px rgba(109, 40, 217, 0.6),
+        0 0 30px rgba(168, 85, 247, 0.9);
+}
+
+#filter-toggle {
+    display: none;
+}
+
+#filter-toggle:checked ~ .outfits-aside {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.cards-container {
-    flex: 1;
-    min-width: 0;
 }
 
 .filter-content {
@@ -264,24 +336,12 @@
     cursor: pointer;
 }
 
-.outfits-aside {
-    display: none;
-}
-
-#filter-toggle:checked ~ .outfits-aside {
-    display: flex;
-}
-
-#filter-toggle {
-    display: none;
-}
 
 .filter-button {
     align-items: center;
     justify-content: center;
-    display: flex;
-
-     font-family: "arcade";
+    display: none;
+    font-family: "arcade";
     cursor: pointer;
     border-radius: 30px;
     border: 2px solid #D8C7FF;
@@ -292,6 +352,7 @@
     color: #080A18;
     width: 100px;
     height: 42px;
+    flex-shrink: 0;
 
     background: linear-gradient(
         to bottom,
@@ -306,8 +367,8 @@
         0 0 20px rgba(168, 85, 247, 0.7);
 
     transition: 0.2s;
-
 }
+
 
 @media (max-width: 1200px) {
     #cards {
@@ -321,14 +382,39 @@
         flex-direction: column;
     }
 
-    .outfits-aside {
-        order: 0;
-        width: 100%;
-        margin-top: 20px;
-    }
-
     .cards-container {
         width: 100%;
+    }
+
+    .outfits-aside {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: auto;
+        margin-top: 0;
+        border-radius: 0;
+        overflow-y: auto;
+        z-index: 100;
+    }
+
+    .filter-button {
+        display: flex;
+    }
+
+    .filter-close {
+        display: flex;
+    }
+
+    .filter-symbols {
+        display: none;
+    }
+
+    #filter-toggle:checked ~ .outfits-aside {
+        display: flex;
     }
 }
 
@@ -338,19 +424,70 @@
     }
 }
 
-@media (max-width: 600px) {
+    @media (max-width: 768px) {
     #cards {
-        grid-template-columns: minmax(0, 300px);
-        justify-content: center;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .card-text {
+        font-size: 13px;
+        max-width: 90%;
+        margin-left: 8px;
+    }
+
+    .outfit-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .outfit-price {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .buy-button {
+        width: 70px;
+        font-size: 11px;
+        letter-spacing: 1px;
+        word-spacing: 0;
+        margin-right: 6px;
     }
 
     .search-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
         align-items: center;
+        justify-content: center;
+        gap: 6px;
     }
 
     .text-input-search {
-        width: 100%;
-        max-width: 400px;
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+        max-width: 350px;
+        padding: 0 8px;
+        font-size: 14px;
+    }
+
+    .search-button {
+        width: 70px;
+        font-size: 12px;
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+
+    .filter-button {
+        width: 42px;
+        font-size: 0;
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+
+    .filter-button::after {
+        content: "✦";
+        font-size: 18px;
+        line-height: 1;
     }
 }

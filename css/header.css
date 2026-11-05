@@ -1,7 +1,7 @@
 header {
     font-family: "arcade" !important;
     font-family: 'Times New Roman', Times, serif;
-    padding-inline: 2.5rem;
+    padding-inline: 5rem;
     padding-block: 1rem;
     font-weight: 900;
     display: flex;
@@ -32,6 +32,7 @@ header {
     justify-content: flex-start; 
     flex: 1; 
 }
+
 
 @media (max-width: 768px) {
     header {

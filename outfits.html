@@ -26,6 +26,8 @@
     <main>
         <div class="outfits-content-container">
 
+            <input type="checkbox" id="filter-toggle">
+
             <div class="cards-container">
 
                 <div class="search-container">
@@ -41,8 +43,6 @@
                     >
                         SEARCH
                     </button>
-
-                    <input type="checkbox" id="filter-toggle">
 
                     <label for="filter-toggle" class="filter-button">
                         FILTER ✦
@@ -156,15 +156,13 @@
                     </div>
 
                 </div>
-
             </div>
 
             <aside class="outfits-aside">
 
                 <div class="header-line-card">
                     <p class="outfit-title">FILTERS</p>
-                    <p class="card-symbols">─ □ ×</p>
-                </div>
+                    <p class="card-symbols"><span class="filter-symbols">─ □ ×</span><label for="filter-toggle" class="filter-close">×</label></p>                </div>
 
                 <div class="filter-content">
 
@@ -212,12 +210,12 @@
 
             </aside>
 
-            
-
         </div>
     </main>
 
-    <footer><h1>© 2026 VYBE</h1></footer>
+    <footer>
+        <h1>© 2026 VYBE</h1>
+    </footer>
 
 </body>
 </html>
