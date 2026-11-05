@@ -11,6 +11,7 @@
     align-items: center;
     gap: 3rem;
     width: 100%;
+    padding: 1rem 0;
 }
 
 .home-container {
@@ -41,6 +42,7 @@
     font-weight: bold;
     cursor: pointer;
     align-self: flex-start;
+    flex-shrink: 0;
     padding: 0.6em 1.5em;
     border-radius: 2em;
     border: 2px solid #D8C7FF;
@@ -76,7 +78,7 @@
 .home-aside {
     width: 35%;
     min-width: 22em;
-    max-height: 80%;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -128,8 +130,6 @@
     line-height: 1.6;
 }
 
-
-
 @media (min-width: 1440px) {
     .landing-wrapper {
         font-size: 19px;
@@ -168,8 +168,11 @@
         font-size: 10px;
     }
 
-    .home-button,
+    .home-button {
+        font-size: 1.95em;
+    }
+
     .aside-button {
-        align-self: stretch;
+        font-size: 1.69em;
     }
 }
